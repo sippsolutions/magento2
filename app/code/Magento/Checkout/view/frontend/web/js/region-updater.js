@@ -182,8 +182,10 @@ define([
                     }).attr('selected', true);
                 }
 
+                regionList.removeAttr('disabled');
+
                 if (this.options.isRegionRequired) {
-                    regionList.addClass('required-entry').removeAttr('disabled');
+                    regionList.addClass('required-entry');
                     container.addClass('required').show();
                 } else {
                     regionList.removeClass('required-entry validate-select').removeAttr('data-validate');
